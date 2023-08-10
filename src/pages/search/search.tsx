@@ -2,7 +2,7 @@ import { useState } from 'react';
 import searchAlbumsAPI from '../../services/searchAlbumsAPI';
 import { AlbumType } from '../../types';
 import Loading from '../../components/loading/loading';
-import Album from '../album/album';
+import AlbumDisplay from '../../components/album/albumDisplay';
 
 type FormValuesTypes = {
   term: string,
@@ -78,7 +78,7 @@ function Search() {
           </p>
           <div>
             {albums.map((album) => (
-              <Album album={ album } key={ album.collectionId } />
+              <AlbumDisplay album={ album } key={ album.collectionId } />
             ))}
           </div>
         </div>
