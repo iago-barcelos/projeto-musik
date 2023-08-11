@@ -5,7 +5,7 @@ import Album from './pages/album/album';
 import NotFound from './pages/not-found/not-found';
 import Loading from './components/loading/loading';
 import './index.css';
-import Layout from './components/layout';
+import Layout from './components/layout/layout';
 
 function App() {
   return (
