@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import searchAlbumsAPI from '../../services/searchAlbumsAPI';
 import { AlbumType } from '../../types';
-import Loading from '../../components/Loading/loading';
-import AlbumDisplay from '../../components/Album/albumDisplay';
+import Loading from '../../components/loading/loading';
+import AlbumDisplay from '../../components/album/albumDisplay';
 
 type FormValuesTypes = {
   term: string,

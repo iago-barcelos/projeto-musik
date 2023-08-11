@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { AlbumType, SongType } from '../../types';
-import MusicDisplay from '../../components/MusicDisplay/musicDisplay';
+import MusicDisplay from '../../components/musicDisplay/musicDisplay';
 import getMusics from '../../services/musicsAPI';
-import Loading from '../../components/Loading/loading';
+import Loading from '../../components/loading/loading';
 
 function Album() {
   const [loading, setLoading] = useState<boolean>(true);

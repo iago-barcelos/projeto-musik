@@ -3,9 +3,9 @@ import Login from './pages/login/login';
 import Search from './pages/search/search';
 import Album from './pages/album/album';
 import NotFound from './pages/not-found/not-found';
-import Loading from './components/Loading/loading';
+import Loading from './components/loading/loading';
 import './index.css';
-import Layout from './components/Layout';
+import Layout from './components/layout';
 
 function App() {
   return (

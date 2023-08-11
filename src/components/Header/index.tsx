@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import Loading from '../Loading/loading';
+import Loading from '../loading/loading';
 import { getUser } from '../../services/userAPI';
 import { UserType } from '../../types';
 
