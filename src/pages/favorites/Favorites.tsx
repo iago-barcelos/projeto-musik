@@ -21,8 +21,14 @@ function Favorites() {
     setMusicValue(
       (prevMusicValue) => prevMusicValue.filter((music) => music.trackId !== trackId),
     );
-    setUpdateTrigger(!updateTrigger); // Atualiza o estado para disparar o useEffect
+    setUpdateTrigger(!updateTrigger);
   };
+
+  if (musicValue.length === 0) {
+    return (
+      <h2>Você não possui músicas favoritadas</h2>
+    );
+  }
 
   return (
     <div>

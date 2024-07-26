@@ -15,7 +15,6 @@ const initialFormValues = {
 function Search() {
   const [formValues, setFormValues] = useState<FormValuesTypes>(initialFormValues);
   const [albums, setAlbums] = useState<AlbumType[]>([]);
-  const [loading, setLoading] = useState<boolean>(false);
   const [searchedArtist, setSearchedArtist] = useState<string>('');
 
   function handleChange(
@@ -33,22 +32,15 @@ function Search() {
 
   const handleSubmit = async (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     event.preventDefault();
-    setLoading(true);
     const data = await searchAlbumsAPI(formValues.term);
     console.log(data);
     setAlbums(data);
     setSearchedArtist(formValues.term);
     setFormValues(initialFormValues);
-    setLoading(false);
   };
 
   const validateForm = () => formValues.term.length >= 2;
 
-  if (loading) {
-    return (
-      <Loading />
-    );
-  }
   return (
     <>
       <div>Search</div>

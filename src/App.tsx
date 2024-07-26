@@ -6,6 +6,7 @@ import NotFound from './pages/not-found/not-found';
 import './index.css';
 import Layout from './components/layout/layout';
 import Favorites from './pages/favorites/Favorites';
+import Profile from './pages/profile/Profile';
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
       </Route>
       <Route path="/favorites" element={ <Layout /> }>
         <Route index Component={ Favorites } />
+      </Route>
+      <Route path="/profile" element={ <Layout /> }>
+        <Route index Component={ Profile } />
       </Route>
       <Route path="/*" element={ <NotFound /> } />
     </Routes>
