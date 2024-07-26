@@ -3,9 +3,9 @@ import Login from './pages/login/login';
 import Search from './pages/search/search';
 import Album from './pages/album/album';
 import NotFound from './pages/not-found/not-found';
-import Loading from './components/loading/loading';
 import './index.css';
 import Layout from './components/layout/layout';
+import Favorites from './pages/favorites/Favorites';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
       <Route path="/album/:id" element={ <Layout /> }>
         <Route index Component={ Album } />
       </Route>
-      <Route path="/loading" element={ <Loading /> } />
+      <Route path="/favorites" element={ <Favorites /> } />
       <Route path="/*" element={ <NotFound /> } />
     </Routes>
   );

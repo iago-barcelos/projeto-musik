@@ -14,13 +14,6 @@ const readFavoriteSongs = (): SongType[] => JSON.parse(
 const saveFavoriteSongs = (favoriteSongs: SongType[]) => localStorage
   .setItem(FAVORITE_SONGS_KEY, JSON.stringify(favoriteSongs));
 
-// --------------------------------------------------------------------
-// A função simulateRequest simula uma requisição para uma API externa
-// Esse tipo de função que "chama outra função" é chamada de
-// "currying function" https://javascript.info/currying-partials
-// não se preocupe, estudaremos isso futuramente.
-// --------------------------------------------------------------------
-
 const simulateRequest = (response: any) => (callback: (param: any) => void) => {
   setTimeout(() => {
     callback(response);
