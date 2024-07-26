@@ -6,9 +6,10 @@ import { addSong, getFavoriteSongs, removeSong } from '../../services/favoriteSo
 
 type MusicCardPropsTypes = {
   music: SongType,
+  onRemoveFavorite: (trackId: number) => void,
 };
 
-function MusicDisplay({ music } : MusicCardPropsTypes) {
+function MusicDisplay({ music, onRemoveFavorite } : MusicCardPropsTypes) {
   const [checked, setChecked] = useState(false);
 
   useEffect(() => {
@@ -25,6 +26,7 @@ function MusicDisplay({ music } : MusicCardPropsTypes) {
     if (!checked) {
       await addSong(music);
     } else {
+      onRemoveFavorite(music.trackId);
       await removeSong(music);
     }
 

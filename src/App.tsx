@@ -17,7 +17,9 @@ function App() {
       <Route path="/album/:id" element={ <Layout /> }>
         <Route index Component={ Album } />
       </Route>
-      <Route path="/favorites" element={ <Favorites /> } />
+      <Route path="/favorites" element={ <Layout /> }>
+        <Route index Component={ Favorites } />
+      </Route>
       <Route path="/*" element={ <NotFound /> } />
     </Routes>
   );

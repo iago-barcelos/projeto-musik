@@ -8,7 +8,7 @@ import Loading from '../../components/loading/loading';
 function Album() {
   const [loading, setLoading] = useState<boolean>(true);
   const [albumValue, setAlbumValue] = useState<AlbumType>();
-  const [musicValue, setMusicValue] = useState<SongType[]>();
+  const [musicValue, setMusicValue] = useState<SongType[]>([]);
 
   const { id } = useParams();
 
@@ -27,6 +27,12 @@ function Album() {
     getData();
   }, [id]);
 
+  const removeFavoriteMusic = (trackId: number) => {
+    setMusicValue(
+      (prevMusicValue) => prevMusicValue.filter((music) => music.trackId !== trackId),
+    );
+  };
+
   if (loading) {
     return (
       <Loading />
@@ -41,6 +47,7 @@ function Album() {
         <MusicDisplay
           music={ music }
           key={ music.trackId }
+          onRemoveFavorite={ removeFavoriteMusic }
         />
       ))}
     </div>
