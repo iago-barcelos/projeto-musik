@@ -16,7 +16,7 @@ function Header() {
     };
 
     getUserData();
-  }, []);
+  }, [user]);
 
   if (loading) {
     return (

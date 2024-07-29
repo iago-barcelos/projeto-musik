@@ -7,6 +7,7 @@ import './index.css';
 import Layout from './components/layout/layout';
 import Favorites from './pages/favorites/Favorites';
 import Profile from './pages/profile/Profile';
+import ProfileEditForm from './pages/profile/ProfileEditForm';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       </Route>
       <Route path="/profile" element={ <Layout /> }>
         <Route index Component={ Profile } />
+        <Route path="edit" Component={ ProfileEditForm } />
       </Route>
       <Route path="/*" element={ <NotFound /> } />
     </Routes>
