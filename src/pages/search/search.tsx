@@ -43,7 +43,6 @@ function Search() {
 
   return (
     <>
-      <div>Search</div>
       <form>
         <input
           data-testid="search-artist-input"
