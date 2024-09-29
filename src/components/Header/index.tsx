@@ -25,9 +25,9 @@ function Header() {
   }
 
   return (
-    <header data-testid="header-component">
+    <header>
       <p data-testid="header-user-name">{user?.name}</p>
-      <nav>
+      <nav className="sideheader">
         <NavLink to="/search" data-testid="link-to-search">Pesquisar</NavLink>
         <NavLink to="/favorites" data-testid="link-to-favorites">Favoritas</NavLink>
         <NavLink to="/profile" data-testid="link-to-profile">Perfil</NavLink>

@@ -3,10 +3,10 @@ import Header from '../Header';
 
 function Layout() {
   return (
-    <>
+    <div className="sidebar">
       <Header />
       <Outlet />
-    </>
+    </div>
   );
 }
 
