@@ -14,18 +14,20 @@ function AlbumDisplay({ album }: AlbumDisplayTypeProps) {
   } = album;
 
   return (
-    <div>
-      <img src={ artworkUrl100 } alt={ collectionName } />
-      <p>{collectionName}</p>
-      <p>{artistName}</p>
-      <Link
-        to={ `/album/${collectionId}` }
-        data-testid={ `link-to-album-${collectionId}` }
-      >
-        Ver Álbum
-
-      </Link>
-    </div>
+    <Link
+      to={ `/album/${collectionId}` }
+      className="album-display-div"
+      data-testid={ `link-to-album-${collectionId}` }
+    >
+      <div
+        className="album-image"
+        style={ { backgroundImage: `url(${artworkUrl100})` } }
+      />
+      <div className="album-info">
+        <p className="album-title">{collectionName}</p>
+        <p className="album-author">{artistName}</p>
+      </div>
+    </Link>
   );
 }
 

@@ -67,7 +67,7 @@ function Search() {
             {' '}
             {searchedArtist}
           </p>
-          <div>
+          <div className="albums-container">
             {albums.map((album) => (
               <AlbumDisplay album={ album } key={ album.collectionId } />
             ))}
