@@ -5,21 +5,44 @@
   height: 100vh; 
 }
 
-.sidebar {
-  width: 15vw;
-  background-color: #f4f4f4;
-}
-
-.content {
+.main-content {
   flex-grow: 1;
   padding: 20px;
   overflow-y: auto;
   width: 85vw;
 }
 
-.sideheader {
+.sidebar {
+  width: 15vw;
+  background-color: #f4f4f4;
+}
+
+.aside-nav-container {
   display: flex;
   flex-direction: column;
+  height: 35%;
+  justify-content: space-evenly;
+}
+
+.aside-nav-button {
+  text-decoration: none;
+  color: black;
+  margin-left: 4%;
+  border: 2px solid black;
+  padding: 6%;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.aside-nav-button:hover {
+  color: white;
+  background-color: black;
+}
+
+.aside-username-p {
+  margin: 3%;
+
 }
 
 .albums-container {
@@ -61,13 +84,13 @@
   bottom: 0;
   background-size: cover;
   background-position: center;
-  filter: brightness(0.7); /* Slightly darken the image for better text visibility */
+  filter: brightness(0.7);
 }
 
 .album-info {
   position: relative;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent background for text */
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 10px;
   text-align: center;

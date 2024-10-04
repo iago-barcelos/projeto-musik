@@ -1,10 +1,10 @@
 import { Outlet } from 'react-router-dom';
-import Header from '../Header';
+import Aside from '../Aside/Aside';
 
 function Layout() {
   return (
-    <div className="sidebar">
-      <Header />
+    <div>
+      <Aside />
       <Outlet />
     </div>
   );

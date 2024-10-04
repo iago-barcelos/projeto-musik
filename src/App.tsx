@@ -8,12 +8,13 @@ import Layout from './components/layout/layout';
 import Favorites from './pages/favorites/Favorites';
 import Profile from './pages/profile/Profile';
 import ProfileEditForm from './pages/profile/ProfileEditForm';
+import Aside from './components/Aside/Aside';
 
 function App() {
   return (
     <div className="container">
-      <Layout />
-      <main className="content">
+      <Aside />
+      <main className="main-content">
         <Routes>
           <Route path="/" element={ <Login /> } />
           <Route path="/search" element={ <Search /> } />
