@@ -2,7 +2,8 @@
 
 .container {
   display: flex;
-  height: 100vh; 
+  height: 100vh;
+  font-family: "Inter", sans-serif;
 }
 
 .main-content {
@@ -27,7 +28,8 @@
 .aside-nav-button {
   text-decoration: none;
   color: black;
-  margin-left: 4%;
+  margin-left: 6%;
+  margin-right: 6%;
   border: 2px solid black;
   padding: 6%;
   border-radius: 5px;
