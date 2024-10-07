@@ -48,21 +48,19 @@ function Login() {
   }
 
   return (
-    <div>
-      <form>
-        <label>
-          Nome de Usuário
-          <input
-            type="text"
-            data-testid="login-name-input"
-            id="name"
-            name="name"
-            onChange={ handleInputChange }
-          />
-        </label>
+    <div className="login-page">
+      <form className="login-form-container">
+        <input
+          placeholder="qual é o seu nome?"
+          type="text"
+          className="login-form-input"
+          id="name"
+          name="name"
+          onChange={ handleInputChange }
+        />
         <button
           type="submit"
-          data-testid="login-submit-button"
+          className="login-form-button"
           disabled={ !inputLoginValidation() }
           onClick={ handleClick }
         >
