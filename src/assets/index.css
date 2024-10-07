@@ -1,5 +1,65 @@
 @import url('./reset.css');
 
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Altura total da tela */
+  
+}
+
+.login-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 4%;
+  border-radius: 10px;
+  border: 2px solid black;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  height: 20%;
+}
+
+.login-form-input, .login-form-button {
+  width: 100%; 
+  max-width: 350px;
+}
+
+.login-form-input {
+  padding: 15px;
+  font-size: 18px;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: left;
+  margin-bottom: 10%;
+}
+
+.login-form-button {
+  width: 100%;
+  padding: 15px;
+  background-color: lightgray;
+  color: black;
+  font-size: 18px;
+  border: 2px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.login-form-button:disabled {
+  background-color: white;
+  color: lightgray;
+  cursor: not-allowed;
+}
+
+.login-form-button:hover:not(:disabled) {
+  background-color: black;
+  color: white;
+}
+
 .container {
   display: flex;
   height: 100vh;
