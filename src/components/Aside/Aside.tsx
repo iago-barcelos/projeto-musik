@@ -1,9 +1,9 @@
 import { NavLink, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { FaSearch, FaUser } from 'react-icons/fa';
+import { MdFavorite } from 'react-icons/md';
 import { getUser } from '../../services/userAPI';
 import { UserType } from '../../types';
-import { FaSearch, FaUser } from "react-icons/fa";
-import { MdFavorite } from "react-icons/md";
 
 function Aside() {
   const [user, setUser] = useState<UserType>();
@@ -31,21 +31,24 @@ function Aside() {
           to="/search"
           className="aside-nav-button"
         >
-          <FaSearch />Pesquisar
+          <FaSearch className="aside-nav-button-icon" />
+          Pesquisar
         </NavLink>
 
         <NavLink
           to="/favorites"
           className="aside-nav-button"
         >
-          <MdFavorite />Favoritas
+          <MdFavorite className="aside-nav-button-icon" />
+          Favoritas
         </NavLink>
 
         <NavLink
           to="/profile"
           className="aside-nav-button"
         >
-          <FaUser />Perfil
+          <FaUser className="aside-nav-button-icon" />
+          Perfil
         </NavLink>
       </nav>
     </header>

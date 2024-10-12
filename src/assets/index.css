@@ -86,8 +86,11 @@
 }
 
 .aside-nav-button {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: black;
+  font-size: 1.2rem;
   margin-left: 6%;
   margin-right: 6%;
   border: 2px solid black;
@@ -100,6 +103,10 @@
 .aside-nav-button:hover {
   color: white;
   background-color: black;
+}
+
+.aside-nav-button-icon {
+  margin-right: 20%;
 }
 
 .aside-username-p {
