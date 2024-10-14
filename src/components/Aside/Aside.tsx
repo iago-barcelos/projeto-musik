@@ -1,5 +1,7 @@
 import { NavLink, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { FaSearch, FaUser } from 'react-icons/fa';
+import { MdFavorite } from 'react-icons/md';
 import { getUser } from '../../services/userAPI';
 import { UserType } from '../../types';
 
@@ -29,6 +31,7 @@ function Aside() {
           to="/search"
           className="aside-nav-button"
         >
+          <FaSearch className="aside-nav-button-icon" />
           Pesquisar
         </NavLink>
 
@@ -36,6 +39,7 @@ function Aside() {
           to="/favorites"
           className="aside-nav-button"
         >
+          <MdFavorite className="aside-nav-button-icon" />
           Favoritas
         </NavLink>
 
@@ -43,6 +47,7 @@ function Aside() {
           to="/profile"
           className="aside-nav-button"
         >
+          <FaUser className="aside-nav-button-icon" />
           Perfil
         </NavLink>
       </nav>

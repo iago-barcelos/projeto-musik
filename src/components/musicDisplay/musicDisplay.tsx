@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { SongType } from '../../types';
-import EmptyHeart from '../../images/empty_heart.png';
-import CheckedHeart from '../../images/checked_heart.png';
+import { MdFavorite, MdFavoriteBorder } from "react-icons/md";
 import { addSong, getFavoriteSongs, removeSong } from '../../services/favoriteSongsAPI';
 
 type MusicCardPropsTypes = {
@@ -49,10 +48,7 @@ function MusicDisplay({ music, onRemoveFavorite } : MusicCardPropsTypes) {
         .
       </audio>
       <label htmlFor={ heartId }>
-        <img
-          src={ checked ? CheckedHeart : EmptyHeart }
-          alt="favorite"
-        />
+        {checked ? <MdFavorite /> : <MdFavoriteBorder />}
       </label>
       <input
         type="checkbox"
