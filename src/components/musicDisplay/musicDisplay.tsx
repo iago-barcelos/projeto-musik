@@ -37,27 +37,28 @@ function MusicDisplay({ music, onRemoveFavorite } : MusicCardPropsTypes) {
   const heartId = `heart-${trackId}`;
 
   return (
-    <div>
+    <div className="music-display-container">
       <p>{trackName}</p>
-      <audio data-testid="audio-component" src={ previewUrl } controls>
-        <track kind="captions" />
-        O seu navegador não suporta o elemento
-        {' '}
-        {' '}
-        <code>audio</code>
-        .
-      </audio>
-      <label htmlFor={ heartId }>
-        {checked ? <MdFavorite /> : <MdFavoriteBorder />}
-      </label>
-      <input
-        type="checkbox"
-        id={ heartId }
-        data-testid={ `checkbox-music-${trackId}` }
-        style={ { display: 'none' } }
-        checked={ checked }
-        onChange={ handleOnChange }
-      />
+      <div className="music-display-audio-input">
+        <audio data-testid="audio-component" src={ previewUrl } controls>
+          <track kind="captions" />
+          O seu navegador não suporta o elemento
+          {' '}
+          {' '}
+          <code>audio</code>
+          .
+        </audio>
+        <label htmlFor={ heartId }>
+          {checked ? <MdFavorite className="music-display-svg-checked"/> : <MdFavoriteBorder className="music-display-svg-unchecked"/>}
+        </label>
+        <input
+          type="checkbox"
+          id={ heartId }
+          style={ { display: 'none' } }
+          checked={ checked }
+          onChange={ handleOnChange }
+        />
+      </div>
     </div>
   );
 }
