@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import searchAlbumsAPI from '../../services/searchAlbumsAPI';
 import { AlbumType } from '../../types';
 import AlbumDisplay from '../../components/Album/AlbumDisplay';
+import { AlbumContext } from '../../context/AlbumContext';
 
 type FormValuesTypes = {
   term: string,
@@ -13,8 +14,14 @@ const initialFormValues = {
 
 function Search() {
   const [formValues, setFormValues] = useState<FormValuesTypes>(initialFormValues);
-  const [albums, setAlbums] = useState<AlbumType[]>([]);
-  const [searchedArtist, setSearchedArtist] = useState<string>('');
+
+  const albumContext = useContext(AlbumContext)
+
+  if (!albumContext) {
+    throw new Error("Contexto não encontrado");
+  }
+
+  const { albums, setAlbums, artist, setArtist } = albumContext
 
   function handleChange(
     event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>,
@@ -31,11 +38,11 @@ function Search() {
 
   const handleSubmit = async (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     event.preventDefault();
-    const data = await searchAlbumsAPI(formValues.term);
-    console.log(data);
+    const data: AlbumType[] = await searchAlbumsAPI(formValues.term);
     setAlbums(data);
-    setSearchedArtist(formValues.term);
+    setArtist(formValues.term);
     setFormValues(initialFormValues);
+    console.log(data);
   };
 
   const validateForm = () => formValues.term.length >= 2;
@@ -64,7 +71,7 @@ function Search() {
           <p>
             Resultado de álbuns de:
             {' '}
-            {searchedArtist}
+            {artist}
           </p>
           <div className="search-div-container">
             {albums.map((album) => (
@@ -73,7 +80,7 @@ function Search() {
           </div>
         </div>
       )}
-      {albums.length === 0 && searchedArtist.length > 1 && (
+      {albums.length === 0 && artist.length > 1 && (
         <div>
           <p>Nenhum álbum foi encontrado</p>
         </div>

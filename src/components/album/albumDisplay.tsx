@@ -13,18 +13,28 @@ function AlbumDisplay({ album }: AlbumDisplayTypeProps) {
     collectionName,
   } = album;
 
+  const explicitOrCensored = () => {
+    switch (album.collectionExplicitness) {
+      case "explicit":
+        return "Explicit Version"
+      case "cleaned": 
+        return "Cleaned Version"
+      default:
+        return ""
+    }
+  } 
+
   return (
     <Link
       to={ `/album/${collectionId}` }
       className="album-display-div"
-      data-testid={ `link-to-album-${collectionId}` }
     >
       <div
         className="album-image"
         style={ { backgroundImage: `url(${artworkUrl100})` } }
       />
       <div className="album-info">
-        <p className="album-title">{collectionName}</p>
+        <p className="album-title">{`${collectionName} - ${ explicitOrCensored() }`}</p>
         <p className="album-author">{artistName}</p>
       </div>
     </Link>

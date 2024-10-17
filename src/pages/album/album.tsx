@@ -29,9 +29,20 @@ function Album() {
     );
   };
 
+  const explicitOrCensored = () => {
+    switch (albumValue?.collectionExplicitness) {
+      case "explicit":
+        return "Explicit Version"
+      case "cleaned": 
+        return "Cleaned Version"
+      default:
+        return ""
+    }
+  } 
+
   return (
     <div>
-      <h1 data-testid="album-name">{albumValue?.collectionName}</h1>
+      <h1 data-testid="album-name">{ `${albumValue?.collectionName} - ${ explicitOrCensored() }` }</h1>
       <h3 data-testid="artist-name">{albumValue?.artistName}</h3>
       {musicValue?.map((music) => (
         <MusicDisplay

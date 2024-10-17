@@ -1,6 +1,6 @@
 .aside-container {
     width: 15vw;
-    background-color: #f4f4f4;
+    background-color: #CAD5CA;
   }
   
   .aside-nav-container {
@@ -11,14 +11,12 @@
   }
   
   .aside-nav-button {
-    display: flex;
-    align-items: center;
     text-decoration: none;
-    color: black;
-    font-size: 1.2rem;
+    color: #211A1D;
+    font-size: 100%;
     margin-left: 6%;
     margin-right: 6%;
-    border: 2px solid black;
+    border: 2px solid #211A1D;
     padding: 6%;
     border-radius: 5px;
     display: inline-block;
@@ -27,7 +25,7 @@
   
   .aside-nav-button:hover {
     color: white;
-    background-color: black;
+    background-color: #211A1D;
   }
   
   .aside-nav-button-icon {

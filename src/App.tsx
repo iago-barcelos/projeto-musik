@@ -8,21 +8,24 @@ import Favorites from './pages/Favorites/Favorites';
 import Profile from './pages/Profile/Profile';
 import ProfileEditForm from './pages/Profile/ProfileEditForm';
 import Layout from './components/Layout/Layout';
+import { AlbumProvider } from './context/AlbumProvider';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={ <Login /> } />
-      <Route path="/*" element={ <NotFound /> } />
+    <AlbumProvider>
+      <Routes>
+        <Route path="/" element={ <Login /> } />
+        <Route path="*" element={ <NotFound /> } />
 
-      <Route element={ <Layout /> }>
-        <Route path="/search" element={ <Search /> } />
-        <Route path="/album/:id" element={ <Album /> } />
-        <Route path="/favorites" element={ <Favorites /> } />
-        <Route path="/profile" element={ <Profile /> } />
-        <Route path="/profile/edit" element={ <ProfileEditForm /> } />
-      </Route>
-    </Routes>
+        <Route element={ <Layout /> }>
+          <Route path="/search" element={ <Search /> } />
+          <Route path="/album/:id" element={ <Album /> } />
+          <Route path="/favorites" element={ <Favorites /> } />
+          <Route path="/profile" element={ <Profile /> } />
+          <Route path="/profile/edit" element={ <ProfileEditForm /> } />
+        </Route>
+      </Routes>
+    </AlbumProvider>
   );
 }
 
