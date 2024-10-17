@@ -24,7 +24,7 @@ function Aside() {
   }
 
   return (
-    <header className="sidebar">
+    <aside className="aside-container">
       <p className="aside-username-p">{user?.name}</p>
       <nav className="aside-nav-container">
         <NavLink
@@ -51,7 +51,7 @@ function Aside() {
           Perfil
         </NavLink>
       </nav>
-    </header>
+    </aside>
   );
 }
 

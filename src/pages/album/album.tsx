@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { AlbumType, SongType } from '../../types';
-import MusicDisplay from '../../components/musicDisplay/musicDisplay';
+import MusicDisplay from '../../components/MusicDisplay/MusicDisplay';
 import getMusics from '../../services/musicsAPI';
 
 function Album() {

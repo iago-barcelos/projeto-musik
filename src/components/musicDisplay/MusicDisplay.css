@@ -1,0 +1,27 @@
+.music-display-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 1.5rem
+  }
+  
+  .music-display-audio-input {
+    display: flex;
+    align-items: center;
+  }
+  
+  .music-display-audio-input label{
+    height: 2rem;
+    width: 2rem;
+  }
+  
+  .music-display-svg-checked {
+    height: 100%;
+    width: 100%;
+    color: red;
+  }
+  
+  .music-display-svg-unchecked {
+    height: 100%;
+    width: 100%;
+  }

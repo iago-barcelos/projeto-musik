@@ -3,9 +3,11 @@ import Aside from '../Aside/Aside';
 
 function Layout() {
   return (
-    <div>
+    <div className="layout-div-container">
       <Aside />
-      <Outlet />
+      <div className="layout-div-outlet">
+        <Outlet />
+      </div>
     </div>
   );
 }
