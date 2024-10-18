@@ -31,24 +31,30 @@ function Aside() {
           to="/search"
           className="aside-nav-button"
         >
-          <FaSearch className="aside-nav-button-icon" />
-          Pesquisar
+          <div className="aside-nav-button-content">
+            <FaSearch className="aside-nav-button-icon" />
+            Pesquisar
+          </div>
         </NavLink>
 
         <NavLink
           to="/favorites"
           className="aside-nav-button"
         >
-          <MdFavorite className="aside-nav-button-icon" />
-          Favoritas
+          <div>  
+            <MdFavorite className="aside-nav-button-icon" />
+            Favoritas
+          </div>
         </NavLink>
 
         <NavLink
           to="/profile"
           className="aside-nav-button"
         >
-          <FaUser className="aside-nav-button-icon" />
-          Perfil
+          <div>
+            <FaUser className="aside-nav-button-icon" />
+            Perfil  
+          </div>
         </NavLink>
       </nav>
     </aside>

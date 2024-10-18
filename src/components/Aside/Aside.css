@@ -13,7 +13,7 @@
   .aside-nav-button {
     text-decoration: none;
     color: #211A1D;
-    font-size: 100%;
+    font-size: 1.1rem;
     margin-left: 6%;
     margin-right: 6%;
     border: 2px solid #211A1D;
@@ -29,10 +29,13 @@
   }
   
   .aside-nav-button-icon {
-    margin-right: 20%;
+    margin-right: 25%;
   }
   
+  .aside-nav-button-content {
+    display: flex;
+  }
+
   .aside-username-p {
     margin: 3%;
-  
   }

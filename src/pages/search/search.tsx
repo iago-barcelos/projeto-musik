@@ -3,6 +3,7 @@ import searchAlbumsAPI from '../../services/searchAlbumsAPI';
 import { AlbumType } from '../../types';
 import AlbumDisplay from '../../components/Album/AlbumDisplay';
 import { AlbumContext } from '../../context/AlbumContext';
+import { useAlbumContext } from '../../hooks/UseAlbumContext';
 
 type FormValuesTypes = {
   term: string,
@@ -15,11 +16,7 @@ const initialFormValues = {
 function Search() {
   const [formValues, setFormValues] = useState<FormValuesTypes>(initialFormValues);
 
-  const albumContext = useContext(AlbumContext)
-
-  if (!albumContext) {
-    throw new Error("Contexto não encontrado");
-  }
+  const albumContext = useAlbumContext()
 
   const { albums, setAlbums, artist, setArtist } = albumContext
 
@@ -48,32 +45,33 @@ function Search() {
   const validateForm = () => formValues.term.length >= 2;
 
   return (
-    <>
-      <form>
+    <div className="search-main-div-container">
+      <form className="search-form">
         <input
-          data-testid="search-artist-input"
           id="term"
           name="term"
           onChange={ handleChange }
+          placeholder="Pesquise por um artista"
           type="text"
+          className="search-form-input"
         />
         <button
-          data-testid="search-artist-button"
           disabled={ !validateForm() }
           onClick={ handleSubmit }
           type="submit"
+          className="search-form-button"
         >
           Pesquisar
         </button>
       </form>
       {albums.length > 0 && (
-        <div>
+        <div className="search-result-div-container">
           <p>
             Resultado de álbuns de:
             {' '}
             {artist}
           </p>
-          <div className="search-div-container">
+          <div className="search-albums-div">
             {albums.map((album) => (
               <AlbumDisplay album={ album } key={ album.collectionId } />
             ))}
@@ -85,7 +83,7 @@ function Search() {
           <p>Nenhum álbum foi encontrado</p>
         </div>
       )}
-    </>
+    </div>
   );
 }
 
