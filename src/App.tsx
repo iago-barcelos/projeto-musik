@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import { Route, Routes } from 'react-router-dom';
 import Login from './pages/Login/Login';
 import Search from './pages/Search/Search';

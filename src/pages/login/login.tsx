@@ -48,7 +48,9 @@ function Login() {
   }
 
   return (
-    <div className="login-page">
+    <div
+      className="login-page"
+    >
       <form className="login-form-container">
         <input
           placeholder="qual é o seu nome?"

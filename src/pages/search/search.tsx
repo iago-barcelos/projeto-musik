@@ -1,8 +1,7 @@
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import searchAlbumsAPI from '../../services/searchAlbumsAPI';
 import { AlbumType } from '../../types';
 import AlbumDisplay from '../../components/Album/AlbumDisplay';
-import { AlbumContext } from '../../context/AlbumContext';
 import { useAlbumContext } from '../../hooks/UseAlbumContext';
 
 type FormValuesTypes = {
@@ -16,9 +15,9 @@ const initialFormValues = {
 function Search() {
   const [formValues, setFormValues] = useState<FormValuesTypes>(initialFormValues);
 
-  const albumContext = useAlbumContext()
+  const albumContext = useAlbumContext();
 
-  const { albums, setAlbums, artist, setArtist } = albumContext
+  const { albums, setAlbums, artist, setArtist } = albumContext;
 
   function handleChange(
     event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>,

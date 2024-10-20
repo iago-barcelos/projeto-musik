@@ -41,7 +41,7 @@ function Aside() {
           to="/favorites"
           className="aside-nav-button"
         >
-          <div>  
+          <div>
             <MdFavorite className="aside-nav-button-icon" />
             Favoritas
           </div>
@@ -53,7 +53,7 @@ function Aside() {
         >
           <div>
             <FaUser className="aside-nav-button-icon" />
-            Perfil  
+            Perfil
           </div>
         </NavLink>
       </nav>

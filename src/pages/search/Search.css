@@ -21,6 +21,11 @@
   text-indent: 5%
 }
 
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #211A1D inset !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+}
+
 .search-form-button {
 
 }
