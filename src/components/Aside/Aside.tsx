@@ -25,7 +25,9 @@ function Aside() {
 
   return (
     <aside className="aside-container">
-      <p className="aside-username-p">{user?.name}</p>
+      <div>
+        <p className="aside-username-p">{user?.name}</p>
+      </div>
       <nav className="aside-nav-container">
         <NavLink
           to="/search"

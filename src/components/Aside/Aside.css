@@ -1,6 +1,7 @@
 .aside-container {
     width: 15vw;
-    background-color: #CAD5CA;
+    background: rgb(33,26,29);
+    background: linear-gradient(0deg, rgba(33,26,29,1) 17%, rgba(99,32,238,1) 52%, rgba(128,117,255,1) 100%);
   }
   
   .aside-nav-container {

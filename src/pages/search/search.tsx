@@ -54,6 +54,7 @@ function Search() {
           type="text"
           className="search-form-input"
         />
+        <i className="fa-solid fa-magnifying-glass"> </i>
         <button
           disabled={ !validateForm() }
           onClick={ handleSubmit }
