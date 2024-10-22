@@ -1,6 +1,6 @@
 @import url('./reset.css');
-@import url('../components/layout/Layout.css');
-@import url('../pages/login/Login.css');
+@import url('../components/Layout/Layout.css');
+@import url('../pages/Login/Login.css');
 @import url('../components/Aside/Aside.css');
 @import url('../pages/Search/Search.css');
 @import url('../components/Album/AlbumDisplay.css');

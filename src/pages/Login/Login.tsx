@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { createUser } from '../../services/userAPI';
-import Loading from '../../components/Loading/Loading';
+import Loading from '../../components/Layout/Layout';
 
 type FormType = {
   name: string

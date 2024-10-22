@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
+import { MdFavorite, MdFavoriteBorder } from 'react-icons/md';
 import { SongType } from '../../types';
-import { MdFavorite, MdFavoriteBorder } from "react-icons/md";
 import { addSong, getFavoriteSongs, removeSong } from '../../services/favoriteSongsAPI';
 
 type MusicCardPropsTypes = {
@@ -49,7 +49,9 @@ function MusicDisplay({ music, onRemoveFavorite } : MusicCardPropsTypes) {
           .
         </audio>
         <label htmlFor={ heartId }>
-          {checked ? <MdFavorite className="music-display-svg-checked"/> : <MdFavoriteBorder className="music-display-svg-unchecked"/>}
+          {checked
+            ? <MdFavorite className="music-display-svg-checked" />
+            : <MdFavoriteBorder className="music-display-svg-unchecked" />}
         </label>
         <input
           type="checkbox"
