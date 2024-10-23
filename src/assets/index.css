@@ -8,7 +8,8 @@
 
 body {
   font-family: "Inter", sans-serif;
-  background-color: #F8F0FB;
+  background: url('../../assets/svg/sun-tornado.svg') no-repeat center center;
+  background-size: cover;
 }
 
 

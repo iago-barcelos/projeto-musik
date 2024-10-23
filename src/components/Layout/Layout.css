@@ -1,6 +1,8 @@
 .layout-div-container {
     display: flex;
-    height: 100vh;    
+    height: 100vh;
+    background: url('../../assets/svg/sun-tornado.svg') no-repeat center center;
+    background-size: cover;
 }
 
 .layout-div-outlet {

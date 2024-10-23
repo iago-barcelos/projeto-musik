@@ -1,12 +1,20 @@
 .login-page {
-    background-image: url('../../assets/svg/background-waves.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: url('../../assets/svg/sun-tornado.svg') no-repeat center center;
+    background-size: cover;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
   
   .login-form-container {
@@ -14,7 +22,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background: #5d5d5e;
+    background: radial-gradient(circle, rgba(93,93,94,1) 0%, rgba(81,81,85,1) 46%, rgba(91,91,92,1) 100%);
     padding: 2rem;
     border-radius: 10px;
     border: 2px solid black;
@@ -39,17 +48,29 @@
     background-color: #211A1D;
     color: #FFFFFF;
   }
+
+  .login-form-input:focus {
+    border-color: white;
+    outline: none;
+    transition: border-color 0.3s;
+  }
   
   .login-form-button {
     width: 100%;
     padding: 15px;
     background-color: lightgray;
+    transition: background-color 0.3s;
     color: black;
     font-size: 18px;
     border: 2px solid black;
     border-radius: 10px;
     cursor: pointer;
     text-transform: uppercase;
+  }
+
+  .login-form-button:active {
+    transform: scale(0.98);
+    transition: transform 0.1s;
   }
   
   .login-form-button:disabled {
@@ -59,6 +80,13 @@
   }
   
   .login-form-button:hover:not(:disabled) {
-    background-color: black;
+    background-color: #211A1D;
     color: white;
+  }
+
+  @media (max-width: 768px) {
+    .login-form-container {
+      width: 90%;
+      height: auto;
+    }
   }
